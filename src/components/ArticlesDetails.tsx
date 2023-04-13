@@ -32,7 +32,7 @@ const ArticlesDetails = () => {
            ( <div className="d-flex  justify-content-center p-3">
             <div>
         <h3>{articles.title}</h3>
-        <h5>{articles.news_site}</h5>
+        <h5 className="fst-italic">{articles.news_site}</h5>
         <img src={articles.image_url} alt={articles.title} style={{width:400,objectFit:"contain",borderRadius:10}} />
             </div>
             <div className="mt-2">

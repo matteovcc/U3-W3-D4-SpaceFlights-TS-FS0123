@@ -28,27 +28,25 @@ const ArticleList = () => {
 
     return(
         <>
-            <Container>
+            <Container className="mt-4">
                 <Row>
         {articles && articles.map((article) => (
-                    <Col md={6} key={
+                    <Col md={4} key={
                         article.id
                     } className="mb-2 text-center">
-            {/* <Card>
-                <Card.Body>{article.image_url}</Card.Body>
-                <Card.Title>{article.title}</Card.Title>
-                <Card.Text>{article.published_at}</Card.Text>
-            </Card> */}
-            <Card className="d-flex flex-column rounded" style={{minHeight:500}}>
+           
+            <Card className="rounded shadow-lg h-100" style={{backgroundColor:"lightgray"}}>
       <Card.Img variant="top" src={article.image_url} style={{height:200}} />
-      <Card.Body>
+      <Card.Body className="d-flex flex-column">
         <Card.Title>{article.title}</Card.Title>
         <Card.Text className="fst-italic">
           {article.summary}
         </Card.Text>
+        <div className="mt-auto">
         <Link to={"/details/" + article.id} >
-        <Button variant="warning" className="mt-auto">Vedi Dettagli</Button>
+        <Button variant="warning" className="text-white fw-semibold">Vedi Dettagli</Button>
         </Link>
+        </div>
       </Card.Body>
     </Card>
                     </Col>
