@@ -3,6 +3,8 @@ import { Card, Container, Row,Col,Button } from "react-bootstrap"
 import {IntArticles} from "../interfaces/IntArticles"
 import { Link } from "react-router-dom"
 const ArticleList = () => {
+
+    
     const [articles,setArticles] = useState<IntArticles[]>([])
 
     const fetchArticles = async () => {
@@ -44,9 +46,9 @@ const ArticleList = () => {
         <Card.Text className="fst-italic">
           {article.summary}
         </Card.Text>
-        {/* <Link to={"/details"}> */}
+        <Link to={"/details/" + article.id} >
         <Button variant="warning" className="mt-auto">Vedi Dettagli</Button>
-        {/* </Link> */}
+        </Link>
       </Card.Body>
     </Card>
                     </Col>
