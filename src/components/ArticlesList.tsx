@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Card, Container, Row,Col,Button } from "react-bootstrap"
 import {IntArticles} from "../interfaces/IntArticles"
+import { Link } from "react-router-dom"
 const ArticleList = () => {
     const [articles,setArticles] = useState<IntArticles[]>([])
 
@@ -36,14 +37,16 @@ const ArticleList = () => {
                 <Card.Title>{article.title}</Card.Title>
                 <Card.Text>{article.published_at}</Card.Text>
             </Card> */}
-            <Card >
-      <Card.Img variant="top" src={article.image_url} />
+            <Card className="d-flex flex-column" style={{minHeight:500}}>
+      <Card.Img variant="top" src={article.image_url} style={{height:200}} />
       <Card.Body>
         <Card.Title>{article.title}</Card.Title>
         <Card.Text className="fst-italic">
           {article.summary}
         </Card.Text>
-        <Button variant="warning">Vedi Dettagli</Button>
+        {/* <Link to={"/details"}> */}
+        <Button variant="warning" className="mt-auto">Vedi Dettagli</Button>
+        {/* </Link> */}
       </Card.Body>
     </Card>
                     </Col>
