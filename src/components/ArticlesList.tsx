@@ -29,7 +29,7 @@ const ArticleList = () => {
     return(
         <>
             <Container className="mt-4">
-                <Row>
+                <Row className="g-2">
         {articles && articles.map((article) => (
                     <Col md={4} key={
                         article.id
