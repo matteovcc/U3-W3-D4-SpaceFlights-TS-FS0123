@@ -39,7 +39,7 @@ const ArticleList = () => {
                 <Card.Title>{article.title}</Card.Title>
                 <Card.Text>{article.published_at}</Card.Text>
             </Card> */}
-            <Card className="d-flex flex-column" style={{minHeight:500}}>
+            <Card className="d-flex flex-column rounded" style={{minHeight:500}}>
       <Card.Img variant="top" src={article.image_url} style={{height:200}} />
       <Card.Body>
         <Card.Title>{article.title}</Card.Title>
